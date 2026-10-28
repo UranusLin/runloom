@@ -14,3 +14,6 @@ pub use control::{InputRequest, LeaseGrant, LeaseProof, LeaseStatus, ResizeReque
 
 mod provider;
 pub use provider::{resume_plan, ProviderCapabilities};
+
+mod recovery;
+pub use recovery::RecoveryInspection;

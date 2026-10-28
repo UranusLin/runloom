@@ -1,17 +1,17 @@
 {
-  "measured_at": "2026-10-28T02:44:56.373867+00:00",
-  "source_sha256": "b3c216d81c4adb621c5814992aafe8e4f47ce1c8a59bf9c66bcda205d01a676f",
+  "measured_at": "2026-10-28T03:02:38.668950+00:00",
+  "source_sha256": "1cd168124c9468056e3a3acc5f1f142f61d67f112e8bb6c670f866f5be4a2c9c",
   "tool": "cargo-llvm-cov 0.9.1",
   "rustc": "rustc 1.91.1 (ed61e7d7e 2025-11-07)",
   "rust_tests": {
-    "passed": 27,
+    "passed": 29,
     "failed": 0,
     "pass_percent": 100.0
   },
   "rust_tests_line_coverage": {
-    "covered": 1298,
-    "count": 2816,
-    "percent": 46.09,
+    "covered": 1333,
+    "count": 2854,
+    "percent": 46.71,
     "files": [
       {
         "file": "crates/runloom-checkpoint/src/git.rs",
@@ -42,6 +42,11 @@
         "file": "crates/runloom-core/src/provider.rs",
         "covered": 99,
         "count": 114
+      },
+      {
+        "file": "crates/runloom-core/src/recovery.rs",
+        "covered": 35,
+        "count": 35
       },
       {
         "file": "crates/runloom-core/src/reservation.rs",
@@ -81,7 +86,7 @@
       {
         "file": "crates/runloom-node/src/server.rs",
         "covered": 0,
-        "count": 427
+        "count": 430
       },
       {
         "file": "crates/runloom-node/src/task.rs",
@@ -96,9 +101,9 @@
     ]
   },
   "combined_line_coverage": {
-    "covered": 1804,
-    "count": 2816,
-    "percent": 64.06,
+    "covered": 1839,
+    "count": 2854,
+    "percent": 64.44,
     "files": [
       {
         "file": "crates/runloom-checkpoint/src/git.rs",
@@ -129,6 +134,11 @@
         "file": "crates/runloom-core/src/provider.rs",
         "covered": 99,
         "count": 114
+      },
+      {
+        "file": "crates/runloom-core/src/recovery.rs",
+        "covered": 35,
+        "count": 35
       },
       {
         "file": "crates/runloom-core/src/reservation.rs",
@@ -168,7 +178,7 @@
       {
         "file": "crates/runloom-node/src/server.rs",
         "covered": 0,
-        "count": 427
+        "count": 430
       },
       {
         "file": "crates/runloom-node/src/task.rs",

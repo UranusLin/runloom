@@ -67,3 +67,7 @@ Supply the provider executable path, a request ID for resume, and the intended `
 Use `checkpoint_capture` while the work is idle, choose untracked paths explicitly, and opt into native-history capture when appropriate. Restore with `checkpoint_restore` into a new destination. `checkpoint_fork` is asynchronous; inspect `branch_status` until ready or inspection is required. Never overwrite a working project to test restore.
 
 A failed or interrupted operation may need inspection rather than replay. Preserve the node root and resulting files for diagnosis. Snapshot content can contain secrets even when common credential filenames are excluded.
+
+## 7. Inspect interrupted work
+
+Use `recovery_inspect` with the selected workspace/work to read persisted reservations, unsettled executions and uncertain input IDs. The endpoint never unlocks, retries or verifies process death. See [RECOVERY](RECOVERY.md) for response semantics and limits. Older deployments may not advertise the capability; check `ping` first.

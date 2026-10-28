@@ -17,6 +17,10 @@ pub struct Request {
 #[serde(tag = "op", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Operation {
     Ping,
+    RecoveryInspect {
+        workspace: String,
+        work: String,
+    },
     TaskCreate {
         spec: crate::task::TaskSpec,
         #[serde(default)]

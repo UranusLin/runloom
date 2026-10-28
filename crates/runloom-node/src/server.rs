@@ -34,6 +34,9 @@ fn dispatch(
     }
     let mut store = Store::open(root.join("state.db"))?;
     match request.operation {
+        Operation::RecoveryInspect { workspace, work } => Ok(serde_json::to_value(
+            store.recovery_inspect(&workspace, &work)?,
+        )?),
         Operation::CheckpointFork { request, proof } => {
             if !allow_interactive {
                 return Err("interactive branches disabled".into());
@@ -103,7 +106,7 @@ fn dispatch(
             )
         }
         Operation::Ping => Ok(
-            json!({"host":host,"batch_enabled":allow_batch,"interactive_input":allow_interactive,"checkpoint_fork":true,"task_create":true}),
+            json!({"host":host,"batch_enabled":allow_batch,"interactive_input":allow_interactive,"checkpoint_fork":true,"task_create":true,"recovery_inspect":true,"schema_version":runloom_core::SCHEMA_VERSION,"package_version":env!("CARGO_PKG_VERSION")}),
         ),
         Operation::InputStatus {
             workspace,

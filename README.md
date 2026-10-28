@@ -98,9 +98,9 @@ A lost connection does not mean a mutation was cancelled. Receipts and explicit 
 
 ## What this preview includes
 
-**Available:** Rust core, CLI, node protocol, supervisors, leases, PTY, provider continuation adapters, checkpoint restore, conversation/worktree branching and task dispatch.
+**Available:** Read-only recovery inspection, Rust core, CLI, node protocol, supervisors, leases, PTY, provider continuation adapters, checkpoint restore, conversation/worktree branching and task dispatch.
 
-**Validated locally:** 27 Rust tests and ten offline demo/integration scripts passed for the initial preview. These cover fixture execution, stale ownership, output replay, checkpoint contention and branching. See [CONTRIBUTING](CONTRIBUTING.md) to reproduce the checks. Hosted CI has not yet run.
+**Validated locally:** 29 Rust tests and ten offline demo/integration scripts passed for the initial preview. These cover fixture execution, stale ownership, output replay, checkpoint contention and branching. See [CONTRIBUTING](CONTRIBUTING.md) to reproduce the checks. Hosted CI has not yet run.
 
 **Still to validate:** clean-machine installation, physical-device handoff, reboot recovery and fresh authenticated provider compatibility. Other operating systems are not certified. Package version `0.1.0` is a development version, not stable acceptance.
 
@@ -139,6 +139,7 @@ Runloom focuses on a small, self-hosted Rust session/execution-state core with a
 | [Usage](docs/USAGE.md) | Foreground startup, SSH, requests, resume and restore |
 | [Architecture](docs/ARCHITECTURE.md) | Identity, persistence, fencing and extension seams |
 | [Roadmap](docs/ROADMAP.md) | Preview, stable release and longer-term product goals |
+| [Recovery](docs/RECOVERY.md) | Inspect interrupted work without unlocking or replaying it |
 | [Testing and coverage](docs/TESTING.md) | Measured coverage, scope and reproduction |
 | [Related projects](docs/RELATED-PROJECTS.md) | Adjacent tools and honest product positioning |
 | [Contributing](CONTRIBUTING.md) | Build commands and regression checks |

@@ -25,6 +25,14 @@ flowchart LR
 | Next | Private vulnerability reporting | Repository Security tab verified |
 | Done locally | Measured quality baseline | Rust-test and combined-fixture line coverage; explicit scope and reproducible commands |
 
+## Immediate priority — explicit recovery
+
+1. **Done locally:** read-only recovery inspection, scoped evidence, bounded responses and no hidden unlock/replay. See [RECOVERY](RECOVERY.md).
+2. **Next:** record operation ownership/generation and distinguish a live worker from an orphan or unverifiable state.
+3. **Next:** propose and apply an explicit resolution with current authority, a final safety recheck, audit events and fault-injection tests.
+
+This milestone should precede more UI or additional providers. Its first diagnostic slice is ready for the developer preview; full repair remains unfinished.
+
 ## Medium term — earn stable v0.1
 
 These are release gates, not claims that the current preview already meets them.

@@ -3,17 +3,17 @@
 README badges are checked-in **local measurement snapshots**, not live GitHub CI badges. Test pass rate answers whether the checks passed; line coverage answers how much instrumented Rust source was observed executing. Neither proves security, correctness or production readiness.
 
 <!-- coverage:start -->
-Measured 2026-10-28T02:44:56.373867+00:00 with cargo-llvm-cov 0.9.1; rustc 1.91.1 (ed61e7d7e 2025-11-07).
+Measured 2026-10-28T03:02:38.668950+00:00 with cargo-llvm-cov 0.9.1; rustc 1.91.1 (ed61e7d7e 2025-11-07).
 
-Rust tests: **27/27 passed (100%)**.
+Rust tests: **29/29 passed (100%)**.
 
 | Rust crate | Rust tests | Tests + offline fixtures |
 | --- | ---: | ---: |
 | runloom-checkpoint | 571/649 (87.98%) | 571/649 (87.98%) |
 | runloom-cli | 5/52 (9.62%) | 52/52 (100.00%) |
-| runloom-core | 708/842 (84.09%) | 734/842 (87.17%) |
-| runloom-node | 14/1273 (1.10%) | 447/1273 (35.11%) |
-| **Workspace** | **1298/2816 (46.09%)** | **1804/2816 (64.06%)** |
+| runloom-core | 743/877 (84.72%) | 769/877 (87.69%) |
+| runloom-node | 14/1276 (1.10%) | 447/1276 (35.03%) |
+| **Workspace** | **1333/2854 (46.71%)** | **1839/2854 (64.44%)** |
 
 [Machine-readable summary](coverage-summary.json) includes the source fingerprint and per-file counts.
 <!-- coverage:end -->

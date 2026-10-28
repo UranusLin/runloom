@@ -109,6 +109,14 @@ with tempfile.TemporaryDirectory(prefix='rl-cp-concurrent-', dir='/tmp') as fold
         except (ValueError,ConnectionError,OSError): pass
         else: raise AssertionError('crashed checkpoint unexpectedly returned')
         server=serve()
+        health=request('ping')
+        assert health['recovery_inspect'] and health['schema_version']==4
+        inspection=request('recovery_inspect',**scope_a)
+        assert inspection['reservations']
+        assert not inspection['automatic_recovery_available']
+        assert not inspection['process_liveness_checked']
+        request('recovery_inspect',ok=False,workspace='wrong',work=scope_a['work'])
+        # Inspection must never release the crash fence.
         blocked=request('start',ok=False,workspace='fixture',work=alias,request_id='after-crash',command=command(source,'true'))
         assert 'reserved by checkpoint' in blocked,blocked
         request('checkpoint_capture',ok=False,**scope_a,proof=pa,untracked=[],auto_native=False)
