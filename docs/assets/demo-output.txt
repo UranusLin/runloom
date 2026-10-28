@@ -1,0 +1,6 @@
+1. Laptop one owns a registered work.
+2. A real fixture process is running independently of the request client.
+3. Laptop two takes over; the old controller is rejected.
+4. The same execution receives the new controller input; output replays correctly.
+5. Checkpoint restores the exact working file into a new directory.
+PASS — local simulation only; not physical-device, AI inference or reboot acceptance.

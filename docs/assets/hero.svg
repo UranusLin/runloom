@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+<title id="title">Runloom</title><desc id="desc">Your agent's work, beyond one laptop. Connected paths represent continuing and branching work.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101f2a"/><stop offset="1" stop-color="#152b31"/></linearGradient><linearGradient id="line"><stop stop-color="#67dcc1"/><stop offset="1" stop-color="#b6a1ee"/></linearGradient></defs>
+<rect width="1200" height="380" rx="22" fill="url(#bg)"/>
+<g fill="none" stroke="#2a424c" stroke-width="1"><path d="M750 0v380M830 0v380M910 0v380M990 0v380M1070 0v380M1150 0v380M700 70h500M700 150h500M700 230h500M700 310h500"/></g>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif"><text x="60" y="78" font-size="13" letter-spacing="4" fill="#7fd8c4">CONTINUITY FOR AI WORK</text><text x="56" y="172" font-size="80" font-weight="700" letter-spacing="-4" fill="#f1f6f4">Runloom</text><text x="60" y="226" font-size="27" fill="#c4d6d8">Your agent's work,</text><text x="60" y="263" font-size="27" fill="#c4d6d8">beyond one laptop.</text><text x="60" y="331" font-size="13" letter-spacing="2" fill="#90aaaF">RESUME  /  HANDOFF  /  BRANCH</text></g>
+<g fill="none" stroke="url(#line)" stroke-width="6" stroke-linecap="round"><path d="M750 265h75q45 0 45-45v-70q0-45 45-45h195"/><path d="M870 190q0 40 45 40h195"/><path d="M970 230q0 75 45 75h95"/></g>
+<g fill="#152b31" stroke="#7adfc8" stroke-width="4"><circle cx="750" cy="265" r="12"/><circle cx="870" cy="190" r="12"/><circle cx="1110" cy="105" r="12"/><circle cx="1110" cy="230" r="12"/><circle cx="1110" cy="305" r="12"/></g>
+</svg>
