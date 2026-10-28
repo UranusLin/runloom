@@ -1,0 +1,186 @@
+{
+  "measured_at": "2026-10-28T02:44:56.373867+00:00",
+  "source_sha256": "b3c216d81c4adb621c5814992aafe8e4f47ce1c8a59bf9c66bcda205d01a676f",
+  "tool": "cargo-llvm-cov 0.9.1",
+  "rustc": "rustc 1.91.1 (ed61e7d7e 2025-11-07)",
+  "rust_tests": {
+    "passed": 27,
+    "failed": 0,
+    "pass_percent": 100.0
+  },
+  "rust_tests_line_coverage": {
+    "covered": 1298,
+    "count": 2816,
+    "percent": 46.09,
+    "files": [
+      {
+        "file": "crates/runloom-checkpoint/src/git.rs",
+        "covered": 111,
+        "count": 125
+      },
+      {
+        "file": "crates/runloom-checkpoint/src/lib.rs",
+        "covered": 460,
+        "count": 524
+      },
+      {
+        "file": "crates/runloom-cli/src/main.rs",
+        "covered": 5,
+        "count": 52
+      },
+      {
+        "file": "crates/runloom-core/src/control.rs",
+        "covered": 148,
+        "count": 208
+      },
+      {
+        "file": "crates/runloom-core/src/execution.rs",
+        "covered": 120,
+        "count": 155
+      },
+      {
+        "file": "crates/runloom-core/src/provider.rs",
+        "covered": 99,
+        "count": 114
+      },
+      {
+        "file": "crates/runloom-core/src/reservation.rs",
+        "covered": 108,
+        "count": 121
+      },
+      {
+        "file": "crates/runloom-core/src/store.rs",
+        "covered": 233,
+        "count": 244
+      },
+      {
+        "file": "crates/runloom-node/src/branch.rs",
+        "covered": 0,
+        "count": 246
+      },
+      {
+        "file": "crates/runloom-node/src/input.rs",
+        "covered": 0,
+        "count": 122
+      },
+      {
+        "file": "crates/runloom-node/src/main.rs",
+        "covered": 0,
+        "count": 55
+      },
+      {
+        "file": "crates/runloom-node/src/protocol.rs",
+        "covered": 14,
+        "count": 30
+      },
+      {
+        "file": "crates/runloom-node/src/pty_worker.rs",
+        "covered": 0,
+        "count": 99
+      },
+      {
+        "file": "crates/runloom-node/src/server.rs",
+        "covered": 0,
+        "count": 427
+      },
+      {
+        "file": "crates/runloom-node/src/task.rs",
+        "covered": 0,
+        "count": 155
+      },
+      {
+        "file": "crates/runloom-node/src/worker.rs",
+        "covered": 0,
+        "count": 139
+      }
+    ]
+  },
+  "combined_line_coverage": {
+    "covered": 1804,
+    "count": 2816,
+    "percent": 64.06,
+    "files": [
+      {
+        "file": "crates/runloom-checkpoint/src/git.rs",
+        "covered": 111,
+        "count": 125
+      },
+      {
+        "file": "crates/runloom-checkpoint/src/lib.rs",
+        "covered": 460,
+        "count": 524
+      },
+      {
+        "file": "crates/runloom-cli/src/main.rs",
+        "covered": 52,
+        "count": 52
+      },
+      {
+        "file": "crates/runloom-core/src/control.rs",
+        "covered": 168,
+        "count": 208
+      },
+      {
+        "file": "crates/runloom-core/src/execution.rs",
+        "covered": 126,
+        "count": 155
+      },
+      {
+        "file": "crates/runloom-core/src/provider.rs",
+        "covered": 99,
+        "count": 114
+      },
+      {
+        "file": "crates/runloom-core/src/reservation.rs",
+        "covered": 108,
+        "count": 121
+      },
+      {
+        "file": "crates/runloom-core/src/store.rs",
+        "covered": 233,
+        "count": 244
+      },
+      {
+        "file": "crates/runloom-node/src/branch.rs",
+        "covered": 99,
+        "count": 246
+      },
+      {
+        "file": "crates/runloom-node/src/input.rs",
+        "covered": 81,
+        "count": 122
+      },
+      {
+        "file": "crates/runloom-node/src/main.rs",
+        "covered": 40,
+        "count": 55
+      },
+      {
+        "file": "crates/runloom-node/src/protocol.rs",
+        "covered": 29,
+        "count": 30
+      },
+      {
+        "file": "crates/runloom-node/src/pty_worker.rs",
+        "covered": 86,
+        "count": 99
+      },
+      {
+        "file": "crates/runloom-node/src/server.rs",
+        "covered": 0,
+        "count": 427
+      },
+      {
+        "file": "crates/runloom-node/src/task.rs",
+        "covered": 0,
+        "count": 155
+      },
+      {
+        "file": "crates/runloom-node/src/worker.rs",
+        "covered": 112,
+        "count": 139
+      }
+    ]
+  },
+  "scope": "Rust workspace source; Cargo unit/integration tests plus ten offline fixture scripts. Excludes Python, bundled C, external dependencies and test/example/bench files per cargo-llvm-cov defaults. Killed processes may not flush profiles. Not branch coverage or live acceptance."
+}

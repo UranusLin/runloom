@@ -4,6 +4,8 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-73dbc4?style=flat-square" alt="MIT license"></a>
+  <a href="docs/TESTING.md"><img src="docs/assets/tests.svg" alt="Measured Rust test results"></a>
+  <a href="docs/TESTING.md"><img src="docs/assets/coverage.svg" alt="Measured Rust line coverage from local tests and fixtures"></a>
   <img src="https://img.shields.io/badge/status-developer_preview-e9bd76?style=flat-square" alt="Developer preview">
   <img src="https://img.shields.io/badge/core-Rust-c8a8ef?style=flat-square" alt="Rust core">
   <img src="https://img.shields.io/badge/platform-macOS_first-9fb7d7?style=flat-square" alt="macOS first">
@@ -116,6 +118,20 @@ Read the [security model](SECURITY.md) and [architecture](docs/ARCHITECTURE.md) 
 
 </details>
 
+## Roadmap at a glance
+
+| Now · locally verified | Next · public preview | Then · stable v0.1 | Later · ecosystem |
+| --- | --- | --- | --- |
+| Rust core, ownership, checkpoints, branching, fixture demo, coverage baseline | Publish clean repo, hosted CI, private reporting | Explicit recovery, real-device handoff, reboot and clean-machine acceptance | Provider contracts, phone clients, history interoperability |
+
+See the [full roadmap](docs/ROADMAP.md) for checklists and acceptance criteria. Coverage badges are **dated local measurements**, not live hosted CI status; [method and scope](docs/TESTING.md).
+
+## Related projects
+
+This is an active space. [Happy](https://github.com/slopus/happy) and [HAPI](https://github.com/tiann/hapi) address remote agent access, [Entire](https://github.com/entireio/cli) connects agent history with Git, and [Conductor](https://www.conductor.build/docs/concepts/parallel-agents) organizes parallel workspaces. Official [Claude Remote Control](https://code.claude.com/docs/en/remote-control) also provides cross-device access.
+
+Runloom focuses on a small, self-hosted Rust session/execution-state core with a client-independent protocol. That is a design direction, not a claim that other projects lack equivalent capabilities. Read the [dated comparison and sources](docs/RELATED-PROJECTS.md).
+
 ## Go deeper
 
 | Document | Start here for… |
@@ -123,6 +139,8 @@ Read the [security model](SECURITY.md) and [architecture](docs/ARCHITECTURE.md) 
 | [Usage](docs/USAGE.md) | Foreground startup, SSH, requests, resume and restore |
 | [Architecture](docs/ARCHITECTURE.md) | Identity, persistence, fencing and extension seams |
 | [Roadmap](docs/ROADMAP.md) | Preview, stable release and longer-term product goals |
+| [Testing and coverage](docs/TESTING.md) | Measured coverage, scope and reproduction |
+| [Related projects](docs/RELATED-PROJECTS.md) | Adjacent tools and honest product positioning |
 | [Contributing](CONTRIBUTING.md) | Build commands and regression checks |
 | [AGENTS.md](AGENTS.md) | Context and invariants for your coding agent |
 | [Security](SECURITY.md) | Trust boundaries and private reporting setup |

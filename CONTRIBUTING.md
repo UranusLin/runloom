@@ -27,6 +27,10 @@ Dependency inventory uses `Cargo.lock`. `python3 scripts/audit-dependencies.py` 
 
 For a change, include the observable problem, resulting behavior, commands tested and limitations. Add regression coverage for ownership, persistence and concurrency changes. Live-provider tests require separate explicit authorization and disposable profiles; they may consume paid quota.
 
+## Coverage
+
+Run `bash scripts/coverage.sh` after installing the tooling in [TESTING](docs/TESTING.md). It measures Rust-test coverage separately from the combined offline fixtures and emits a sanitized summary. README badges are local snapshots, not live CI status.
+
 ## Release review
 
 Review code and security independently, resolve reproducible high-severity findings, and build from the exported source tree. Follow [ROADMAP](docs/ROADMAP.md) for the distinction between a demonstrable preview and stable acceptance. GitHub Actions is configured but must run in the actual public repository before claiming hosted CI success.
