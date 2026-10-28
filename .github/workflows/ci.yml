@@ -1,0 +1,26 @@
+name: Core checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  rust:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.91.0
+        with:
+          components: rustfmt, clippy
+      - run: cargo fmt --check
+      - run: cargo clippy --workspace --all-targets --locked -- -D warnings
+      - run: cargo test --workspace --locked
+      - run: cargo build --workspace --locked
+      - run: python3 scripts/smoke-node.py
+      - run: python3 scripts/smoke-control.py
+      - run: python3 scripts/smoke-pty.py
+      - run: python3 scripts/smoke-task.py
+      - run: python3 scripts/smoke-cli.py
+      - run: python3 scripts/smoke-checkpoint.py
+      - run: python3 scripts/smoke-branch-control.py
+      - run: python3 scripts/test-native-materialization.py
+      - run: python3 scripts/smoke-checkpoint-concurrency.py
+      - run: python3 scripts/demo-local.py

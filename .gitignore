@@ -1,0 +1,15 @@
+/target/
+.DS_Store
+.env
+.env.*
+!.env.example
+/local-data/
+/test-artifacts/
+*.key
+*.pem
+
+__pycache__/
+*.pyc
+*.db
+*.db-wal
+*.db-shm
