@@ -14,6 +14,7 @@ jobs:
       - run: cargo clippy --workspace --all-targets --locked -- -D warnings
       - run: cargo test --workspace --locked
       - run: cargo build --workspace --locked
+      - run: python3 scripts/smoke-recovery-plan.py
       - run: python3 scripts/smoke-node.py
       - run: python3 scripts/smoke-control.py
       - run: python3 scripts/smoke-pty.py

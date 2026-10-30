@@ -16,7 +16,7 @@ mkdir -p target/coverage
 cargo build --workspace --locked
 cargo test --workspace --locked 2>&1 | tee target/coverage/rust-tests.log
 cargo llvm-cov report --json --summary-only --output-path target/coverage/rust-tests.json
-for fixture in smoke-cli smoke-node smoke-control smoke-pty smoke-checkpoint smoke-checkpoint-concurrency smoke-branch-control test-native-materialization smoke-task demo-local; do
+for fixture in smoke-recovery-plan smoke-cli smoke-node smoke-control smoke-pty smoke-checkpoint smoke-checkpoint-concurrency smoke-branch-control test-native-materialization smoke-task demo-local; do
   python3 "scripts/$fixture.py" 2>&1 | tee "target/coverage/$fixture.log"
 done
 cargo llvm-cov report --json --summary-only --output-path target/coverage/combined.json

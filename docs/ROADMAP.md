@@ -1,6 +1,6 @@
 # Roadmap
 
-**Current stage: locally validated developer preview.** Updated 2026-10-28.
+**Current stage: locally validated developer preview.** Updated 2026-10-30.
 
 Statuses describe evidence, not elapsed effort: **Done locally** means repeatable fixture validation; **Next** is an acceptance gate; **Planned** is not implemented or promised on a date. We do not assign a percentage to the product roadmap.
 
@@ -28,8 +28,9 @@ flowchart LR
 ## Immediate priority — explicit recovery
 
 1. **Done locally:** read-only recovery inspection, scoped evidence, bounded responses and no hidden unlock/replay. See [RECOVERY](RECOVERY.md).
-2. **Next:** record operation ownership/generation and distinguish a live worker from an orphan or unverifiable state.
-3. **Next:** propose and apply an explicit resolution with current authority, a final safety recheck, audit events and fault-injection tests.
+2. **Done locally:** advisory recovery plans with ordered investigation steps, explicit scope limits, capability negotiation and a CLI reader. No apply operation or liveness claim.
+3. **Next:** record operation ownership/generation and distinguish a live worker from an orphan or unverifiable state.
+4. **Next:** apply an explicit resolution with current authority, a final safety recheck, audit events and fault-injection tests.
 
 This milestone should precede more UI or additional providers. Its first diagnostic slice is ready for the developer preview; full repair remains unfinished.
 

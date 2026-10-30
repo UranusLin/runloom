@@ -17,6 +17,10 @@ pub struct Request {
 #[serde(tag = "op", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Operation {
     Ping,
+    RecoveryPlan {
+        workspace: String,
+        work: String,
+    },
     RecoveryInspect {
         workspace: String,
         work: String,

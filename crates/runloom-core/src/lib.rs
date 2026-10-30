@@ -17,3 +17,6 @@ pub use provider::{resume_plan, ProviderCapabilities};
 
 mod recovery;
 pub use recovery::RecoveryInspection;
+
+mod recovery_plan;
+pub use recovery_plan::{RecoveryDisposition, RecoveryPlan};

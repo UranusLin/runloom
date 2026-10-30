@@ -34,3 +34,32 @@ The next milestone will add operation ownership/liveness evidence and an explici
 ## Validation boundary
 
 Unit/integration tests cover scoped queries, bounded output, omission of sensitive payloads, retained uncertain receipts and retained crash reservations after inspection. The slow-checkpoint fixture calls the endpoint after killing its disposable service and verifies that a new writer remains blocked. These tests do not prove physical host reboot recovery or provide an unlock operation.
+
+## Advisory recovery plan (plan version 1)
+
+`ping.recovery_plan: true` advertises the next diagnostic stage. Request:
+
+```json
+{"version":1,"op":"recovery_plan","workspace":"demo","work":"WORK_ID"}
+```
+
+Or use the local command-line reader on the node host:
+
+```sh
+python3 scripts/recovery-plan.py --node ./target/debug/runloom-node \
+  --root /absolute/path/to/node --workspace demo --work WORK_ID
+```
+
+Add `--json` to include scoped evidence IDs/paths; these can reveal private project information. The reader checks capability first, starts no service and never applies a repair. For remote use, the same JSON request works through the existing SSH request bridge.
+
+| Disposition | Meaning |
+| --- | --- |
+| `evidence_incomplete` | At least one evidence category was capped; missing rows prevent a complete inventory |
+| `manual_investigation_required` | Recorded reservations, unsettled executions or uncertain inputs need investigation |
+| `no_recorded_blockers` | None in the three inspected categories; **not** a safe-to-resume or healthy-process verdict |
+
+The plan contains the same consistent inspection snapshot, ordered steps with stable codes, prohibited actions and explicit limitations. Resolve incomplete evidence first, preserve checkpoint artifacts, establish execution ownership and reconcile uncertain input against provider/output history. Branch/task receipt files, overlapping other work, unmanaged processes and external effects are outside this snapshot.
+
+`apply_supported` remains false. Plans are advisory snapshots, not persistent approvals, apply tokens or locks; they become stale as work changes. `recovery_apply` is not implemented. No plan may authorize deletion of a reservation, input replay or task restart. Ownership/generation evidence and an audited, rechecked repair protocol remain separate milestones.
+
+Run `python3 scripts/smoke-recovery-plan.py` after building. It creates a disposable node with synthetic interrupted-operation evidence, checks scope/refusal/CLI guidance and verifies that all fences and uncertain records survive. No AI provider or existing session is used.

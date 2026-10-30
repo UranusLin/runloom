@@ -33,6 +33,26 @@ fn inspection_preserves_unknown_evidence_and_does_not_expose_payloads() {
         [&work.id],
     )
     .unwrap();
+    let plan = store.recovery_plan("fixture", &work.id).unwrap();
+    assert_eq!(
+        plan.disposition,
+        runloom_core::RecoveryDisposition::ManualInvestigationRequired
+    );
+    assert!(!plan.apply_supported);
+    assert_eq!(
+        plan.steps.iter().map(|s| s.code).collect::<Vec<_>>(),
+        vec![
+            "preserve_checkpoint_artifacts",
+            "verify_execution_owner",
+            "reconcile_uncertain_input",
+            "review_resolution_separately"
+        ]
+    );
+    assert!(!serde_json::to_string(&plan).unwrap().contains("SECRET"));
+    assert!(matches!(
+        store.recovery_plan("wrong", &work.id),
+        Err(Error::NotFound)
+    ));
     let report = store.recovery_inspect("fixture", &work.id).unwrap();
     assert_eq!(report.reservations.len(), 1);
     assert_eq!(report.unsettled_executions[0].persisted_state, "running");
@@ -83,6 +103,13 @@ fn inspection_bounds_results_and_empty_does_not_claim_safe_recovery() {
             title: "fixture".into(),
         })
         .unwrap();
+    let plan = store.recovery_plan("p", &work.id).unwrap();
+    assert_eq!(
+        plan.disposition,
+        runloom_core::RecoveryDisposition::NoRecordedBlockers
+    );
+    assert!(!plan.apply_supported);
+    assert_eq!(plan.steps[0].code, "inspect_other_operation_state");
     let empty = store.recovery_inspect("p", &work.id).unwrap();
     assert!(empty.reservations.is_empty());
     assert!(!empty.automatic_recovery_available);
@@ -94,6 +121,13 @@ fn inspection_bounds_results_and_empty_does_not_claim_safe_recovery() {
         )
         .unwrap();
     }
+    let plan = store.recovery_plan("p", &work.id).unwrap();
+    assert_eq!(
+        plan.disposition,
+        runloom_core::RecoveryDisposition::EvidenceIncomplete
+    );
+    assert_eq!(plan.steps[0].code, "inspect_complete_evidence");
+    assert_eq!(plan.evidence.reservations.len(), 100);
     let report = store.recovery_inspect("p", &work.id).unwrap();
     assert!(report.truncated);
     assert_eq!(report.reservations.len(), 100);

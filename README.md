@@ -149,3 +149,7 @@ Runloom focuses on a small, self-hosted Rust session/execution-state core with a
 ## License
 
 Runloom is [MIT licensed](LICENSE). Dependencies retain their own licenses; see [third-party notices](THIRD_PARTY_NOTICES.md). The source package excludes private deployment history, credentials, desktop clients and character/voice assets.
+
+### Recovery guidance
+
+Runloom can now turn scoped recovery evidence into an ordered, read-only investigation plan. It distinguishes incomplete evidence from recorded blockers and explicitly refuses to treat an empty snapshot as permission to restart work. [Recovery guide](docs/RECOVERY.md) includes the JSON endpoint, command-line reader and disposable failure demo. Automatic repair remains outside this developer preview.

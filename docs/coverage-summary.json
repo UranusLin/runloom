@@ -1,6 +1,6 @@
 {
-  "measured_at": "2026-10-28T03:02:38.668950+00:00",
-  "source_sha256": "1cd168124c9468056e3a3acc5f1f142f61d67f112e8bb6c670f866f5be4a2c9c",
+  "measured_at": "2026-10-30T10:31:22.571422+00:00",
+  "source_sha256": "e15c61b0ce229d1e150acb540820b69de8d2aaa3f922715306743c931a2f8700",
   "tool": "cargo-llvm-cov 0.9.1",
   "rustc": "rustc 1.91.1 (ed61e7d7e 2025-11-07)",
   "rust_tests": {
@@ -9,9 +9,9 @@
     "pass_percent": 100.0
   },
   "rust_tests_line_coverage": {
-    "covered": 1333,
-    "count": 2854,
-    "percent": 46.71,
+    "covered": 1380,
+    "count": 2904,
+    "percent": 47.52,
     "files": [
       {
         "file": "crates/runloom-checkpoint/src/git.rs",
@@ -47,6 +47,11 @@
         "file": "crates/runloom-core/src/recovery.rs",
         "covered": 35,
         "count": 35
+      },
+      {
+        "file": "crates/runloom-core/src/recovery_plan.rs",
+        "covered": 47,
+        "count": 47
       },
       {
         "file": "crates/runloom-core/src/reservation.rs",
@@ -86,7 +91,7 @@
       {
         "file": "crates/runloom-node/src/server.rs",
         "covered": 0,
-        "count": 430
+        "count": 433
       },
       {
         "file": "crates/runloom-node/src/task.rs",
@@ -101,9 +106,9 @@
     ]
   },
   "combined_line_coverage": {
-    "covered": 1839,
-    "count": 2854,
-    "percent": 64.44,
+    "covered": 1886,
+    "count": 2904,
+    "percent": 64.94,
     "files": [
       {
         "file": "crates/runloom-checkpoint/src/git.rs",
@@ -139,6 +144,11 @@
         "file": "crates/runloom-core/src/recovery.rs",
         "covered": 35,
         "count": 35
+      },
+      {
+        "file": "crates/runloom-core/src/recovery_plan.rs",
+        "covered": 47,
+        "count": 47
       },
       {
         "file": "crates/runloom-core/src/reservation.rs",
@@ -178,7 +188,7 @@
       {
         "file": "crates/runloom-node/src/server.rs",
         "covered": 0,
-        "count": 430
+        "count": 433
       },
       {
         "file": "crates/runloom-node/src/task.rs",
@@ -192,5 +202,5 @@
       }
     ]
   },
-  "scope": "Rust workspace source; Cargo unit/integration tests plus ten offline fixture scripts. Excludes Python, bundled C, external dependencies and test/example/bench files per cargo-llvm-cov defaults. Killed processes may not flush profiles. Not branch coverage or live acceptance."
+  "scope": "Rust workspace source; Cargo unit/integration tests plus eleven offline fixture scripts. Excludes Python, bundled C, external dependencies and test/example/bench files per cargo-llvm-cov defaults. Killed processes may not flush profiles. Not branch coverage or live acceptance."
 }
