@@ -1,6 +1,6 @@
 # Roadmap
 
-**Current stage: locally validated developer preview.** Updated 2026-10-30.
+**Current stage: locally validated developer preview.** Updated 2026-11-06.
 
 Statuses describe evidence, not elapsed effort: **Done locally** means repeatable fixture validation; **Next** is an acceptance gate; **Planned** is not implemented or promised on a date. We do not assign a percentage to the product roadmap.
 
@@ -21,6 +21,7 @@ flowchart LR
 | Done locally | Core ownership, checkpoints and branches | Rust tests and offline process/integration fixtures |
 | Done locally | Review and concurrency repairs | Independent code/security re-review; regression fixtures |
 | Done locally | Demonstration and contributor docs | Runnable demo, Mermaid diagrams, usage and AI handoff guide |
+| Done locally | Versioned alpha packaging | Version/tag checks, checksums and isolated-HOME installer fixture; see [release guide](RELEASE.md) |
 | Next | Publish the intended GitHub repository | Owner uploads clean history; hosted checks pass |
 | Next | Private vulnerability reporting | Repository Security tab verified |
 | Done locally | Measured quality baseline | Rust-test and combined-fixture line coverage; explicit scope and reproducible commands |

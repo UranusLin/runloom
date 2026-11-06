@@ -102,7 +102,7 @@ A lost connection does not mean a mutation was cancelled. Receipts and explicit 
 
 **Validated locally:** 29 Rust tests and ten offline demo/integration scripts passed for the initial preview. These cover fixture execution, stale ownership, output replay, checkpoint contention and branching. See [CONTRIBUTING](CONTRIBUTING.md) to reproduce the checks. Hosted CI has not yet run.
 
-**Still to validate:** clean-machine installation, physical-device handoff, reboot recovery and fresh authenticated provider compatibility. Other operating systems are not certified. Package version `0.1.0` is a development version, not stable acceptance.
+**Still to validate:** clean-machine installation, physical-device handoff, reboot recovery and fresh authenticated provider compatibility. Other operating systems are not certified. Package version `0.1.0-alpha.1` is a development version, not stable acceptance.
 
 <details>
 <summary><strong>Operational boundaries worth knowing</strong></summary>
@@ -153,3 +153,10 @@ Runloom is [MIT licensed](LICENSE). Dependencies retain their own licenses; see 
 ### Recovery guidance
 
 Runloom can now turn scoped recovery evidence into an ordered, read-only investigation plan. It distinguishes incomplete evidence from recorded blockers and explicitly refuses to treat an empty snapshot as permission to restart work. [Recovery guide](docs/RECOVERY.md) includes the JSON endpoint, command-line reader and disposable failure demo. Automatic repair remains outside this developer preview.
+
+## Versioned preview builds
+
+The first planned release is **v0.1.0-alpha.1**, targeting macOS Apple Silicon.
+See [release and installation guide](docs/RELEASE.md) for side-by-side installation,
+build identities, checksums, compatibility and draft-release gates. Source availability
+does not imply that a binary release or hosted CI has already been published.

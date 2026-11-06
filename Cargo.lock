@@ -476,7 +476,7 @@ checksum = "f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf"
 
 [[package]]
 name = "runloom-checkpoint"
-version = "0.1.0"
+version = "0.1.0-alpha.1"
 dependencies = [
  "runloom-core",
  "serde",
@@ -487,7 +487,7 @@ dependencies = [
 
 [[package]]
 name = "runloom-cli"
-version = "0.1.0"
+version = "0.1.0-alpha.1"
 dependencies = [
  "clap",
  "runloom-core",
@@ -496,7 +496,7 @@ dependencies = [
 
 [[package]]
 name = "runloom-core"
-version = "0.1.0"
+version = "0.1.0-alpha.1"
 dependencies = [
  "rusqlite",
  "serde",
@@ -508,7 +508,7 @@ dependencies = [
 
 [[package]]
 name = "runloom-node"
-version = "0.1.0"
+version = "0.1.0-alpha.1"
 dependencies = [
  "clap",
  "fs2",

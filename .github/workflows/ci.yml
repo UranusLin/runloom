@@ -1,5 +1,8 @@
 name: Core checks
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  workflow_call:
 permissions:
   contents: read
 jobs:
@@ -10,6 +13,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@1.91.0
         with:
           components: rustfmt, clippy
+      - run: python3 scripts/test-release.py
       - run: cargo fmt --check
       - run: cargo clippy --workspace --all-targets --locked -- -D warnings
       - run: cargo test --workspace --locked
