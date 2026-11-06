@@ -48,6 +48,6 @@ The internal source template uses `--docs docs/public`. The summary includes too
 
 ## CI and next improvements
 
-The coverage job runs the same script and uploads the sanitized summary as a GitHub artifact. This workflow has been configured locally; hosted execution is unverified until the public repository runs it. Badges remain explicitly dated snapshots, without a Codecov token or external coverage account.
+The coverage job runs the same script and uploads the sanitized summary as a GitHub artifact. The [first hosted core and coverage run](https://github.com/UranusLin/runloom/actions/runs/42153908748) passed. The checked-in measurements above remain dated local snapshots; hosted summaries are available as workflow artifacts. Badges remain explicitly dated snapshots, without a Codecov token or external coverage account.
 
 Use the per-file breakdown to prioritize node lifecycle, input uncertainty and recovery tests. Establish a reproducible baseline before adding a coverage threshold; do not hide low-covered source files or add assertions solely to inflate a badge. See [roadmap](ROADMAP.md) and [contributing](../CONTRIBUTING.md).

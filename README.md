@@ -100,7 +100,7 @@ A lost connection does not mean a mutation was cancelled. Receipts and explicit 
 
 **Available:** Read-only recovery inspection, Rust core, CLI, node protocol, supervisors, leases, PTY, provider continuation adapters, checkpoint restore, conversation/worktree branching and task dispatch.
 
-**Validated locally:** 29 Rust tests and ten offline demo/integration scripts passed for the initial preview. These cover fixture execution, stale ownership, output replay, checkpoint contention and branching. See [CONTRIBUTING](CONTRIBUTING.md) to reproduce the checks. Hosted CI has not yet run.
+**Validated locally:** 29 Rust tests and ten offline demo/integration scripts passed for the initial preview. These cover fixture execution, stale ownership, output replay, checkpoint contention and branching. See [CONTRIBUTING](CONTRIBUTING.md) to reproduce the checks. [Hosted core checks](https://github.com/UranusLin/runloom/actions/runs/42153908748) and the [alpha release workflow](https://github.com/UranusLin/runloom/actions/runs/42154225827) have passed.
 
 **Still to validate:** clean-machine installation, physical-device handoff, reboot recovery and fresh authenticated provider compatibility. Other operating systems are not certified. Package version `0.1.0-alpha.1` is a development version, not stable acceptance.
 
@@ -156,7 +156,13 @@ Runloom can now turn scoped recovery evidence into an ordered, read-only investi
 
 ## Versioned preview builds
 
-The first planned release is **v0.1.0-alpha.1**, targeting macOS Apple Silicon.
+The first release is [**v0.1.0-alpha.1**](https://github.com/UranusLin/runloom/releases/tag/v0.1.0-alpha.1), targeting macOS Apple Silicon.
+
+```sh
+brew install UranusLin/tap/runloom
+```
+
+The [Homebrew tap](https://github.com/UranusLin/homebrew-tap) pins the published binary;
+its [hosted installation test](https://github.com/UranusLin/homebrew-tap/actions/runs/42154827368) passed. Installation does not start or restart a service.
 See [release and installation guide](docs/RELEASE.md) for side-by-side installation,
-build identities, checksums, compatibility and draft-release gates. Source availability
-does not imply that a binary release or hosted CI has already been published.
+build identities, checksums, compatibility and draft-release gates. This remains an alpha preview; hosted checks do not replace the remaining real-device and recovery acceptance gates.
