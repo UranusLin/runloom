@@ -3,12 +3,12 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-73dbc4?style=flat-square" alt="MIT license"></a>
+  <a href="LICENSE"><img src="docs/assets/license.svg" alt="MIT license"></a>
   <a href="docs/TESTING.md"><img src="docs/assets/tests.svg" alt="Measured Rust test results"></a>
   <a href="docs/TESTING.md"><img src="docs/assets/coverage.svg" alt="Measured Rust line coverage from local tests and fixtures"></a>
-  <img src="https://img.shields.io/badge/status-developer_preview-e9bd76?style=flat-square" alt="Developer preview">
-  <img src="https://img.shields.io/badge/core-Rust-c8a8ef?style=flat-square" alt="Rust core">
-  <img src="https://img.shields.io/badge/platform-macOS_first-9fb7d7?style=flat-square" alt="macOS first">
+  <img src="docs/assets/status.svg" alt="Developer preview">
+  <img src="docs/assets/core.svg" alt="Rust core">
+  <img src="docs/assets/platform.svg" alt="macOS first">
 </p>
 
 <p align="center">
